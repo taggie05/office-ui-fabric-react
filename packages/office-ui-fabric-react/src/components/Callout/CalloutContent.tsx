@@ -310,7 +310,9 @@ export class CalloutContent extends BaseComponent<ICalloutProps, ICalloutState> 
   }
 
   private _getMaxHeight(): number {
+    // if not maxHeight checking to see if this is false
     if (!this._maxHeight) {
+      // if directionalHintfixed and target are both truthy statements then it will return whats inside curly brackets if false or falsy then it moves on to the else statement
       if (this.props.directionalHintFixed && this._target) {
         let beakWidth = this.props.isBeakVisible ? this.props.beakWidth : 0;
         let gapSpace = this.props.gapSpace ? this.props.gapSpace : 0;
